@@ -1,0 +1,58 @@
+@import url('https://cdn.jsdelivr.net/gh/Jihwan-Suh/PyeojinGothic/CSS/pyeojin-font.css');
+
+:root {
+  --bg: #f5f6f8;
+  --fg: #171717;
+  --muted: #6b7280;
+  --card: #fff;
+  --border: #e5e7eb;
+  --accent: #171717;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: 'PyeojinGothic', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.7;
+  word-break: keep-all;
+}
+a { color: inherit; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+header.top {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 0;
+}
+header.top .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; letter-spacing: -0.02em; text-decoration: none; }
+header.top .brand img { width: 28px; height: 28px; border-radius: 7px; }
+header.top nav a { font-size: 14px; color: var(--muted); text-decoration: none; margin-left: 18px; }
+header.top nav a:hover { color: var(--fg); }
+
+.hero { padding: 56px 0 28px; }
+.hero h1 { font-size: 44px; line-height: 1.2; font-weight: 900; letter-spacing: -0.03em; margin: 0 0 14px; }
+.hero p { font-size: 18px; color: var(--muted); margin: 0 0 24px; }
+.btn { display: inline-block; padding: 12px 20px; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 15px; }
+.btn.primary { background: var(--accent); color: #fff; }
+.btn.ghost { border: 1px solid var(--border); background: var(--card); margin-left: 8px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 28px 0; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+.card h3 { margin: 0 0 6px; font-size: 16px; }
+.card p { margin: 0; font-size: 14px; color: var(--muted); }
+
+.doc { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 36px; margin: 24px 0 48px; }
+.doc h1 { font-size: 30px; font-weight: 900; letter-spacing: -0.02em; margin: 0 0 6px; }
+.doc .meta { color: var(--muted); font-size: 14px; margin-bottom: 28px; }
+.doc h2 { font-size: 19px; margin: 32px 0 10px; }
+.doc p, .doc li { font-size: 15px; }
+.doc table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0; }
+.doc th, .doc td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
+.doc th { background: #f3f4f6; font-weight: 600; }
+.doc .note { background: #f3f4f6; border-radius: 10px; padding: 12px 14px; font-size: 14px; }
+
+footer { color: var(--muted); font-size: 13px; padding: 24px 0 48px; }
+footer a { text-decoration: none; margin-right: 14px; }
+@media (max-width: 600px) {
+  .hero h1 { font-size: 32px; }
+  .doc { padding: 22px; }
+}
